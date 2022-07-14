@@ -1,12 +1,12 @@
 <?php
-defined('TYPO3_MODE') or die();
+defined('TYPO3') or die();
 
 call_user_func(
     function()
     {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'CAG.T3footnotes',
+            'T3footnotes',
             'List',
             'Footnotes'
         );

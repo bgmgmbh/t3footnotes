@@ -1,19 +1,19 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+defined('TYPO3') || die('Access denied.');
 
 call_user_func(
     function()
     {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'CAG.T3footnotes',
+            'T3footnotes',
             'List',
             [
-                'Footnote' => 'list, show'
+                \CAG\T3footnotes\Controller\FootnoteController::class => 'list, show'
             ],
             // non-cacheable actions
             [
-                'Footnote' => ''
+                \CAG\T3footnotes\Controller\FootnoteController::class => ''
             ]
         );
 

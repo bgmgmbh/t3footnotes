@@ -2,6 +2,7 @@
 namespace CAG\T3footnotes\Hooks;
 
 
+use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3\CMS\Core\TypoScript\TypoScriptService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
@@ -58,7 +59,7 @@ class FootnotesHook
 
     /**
      * @param array $params
-     * @param \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController $pObj
+     * @param TypoScriptFrontendController $pObj
      */
     public function generateFootnotes($params, $pObj)
     {
@@ -141,7 +142,7 @@ class FootnotesHook
 
     /**
      * @param $patternFootnoteAnchors
-     * @param \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController $pObj
+     * @param TypoScriptFrontendController $pObj
      * @return array
      */
     protected function getFootnotesAnchors($patternFootnoteAnchors, $pObj)
@@ -159,7 +160,7 @@ class FootnotesHook
 
     /**
      * @param array $footnotes prepared footnotes date with anchor number
-     * @param \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController $pObj
+     * @param TypoScriptFrontendController $pObj
      * @return string
      */
     protected function buildFootnotesContainer($footnotes, $pObj)
